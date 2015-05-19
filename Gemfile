@@ -6,6 +6,7 @@ gem 'slim'
 gem 'rails', '4.2.0'
 gem 'pg'
 gem 'airbrake'
+gem 'unicorn', '~> 4.8.3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
