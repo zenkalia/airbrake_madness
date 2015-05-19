@@ -4,6 +4,10 @@ namespace :whatever do
   desc 'bad request'
   task :bad_request => :environment do
     url = 'http://www.gsdfsjkhfshfjks.com'
-    open(url).read
+    begin
+      open(url).read
+    rescue OpenURI::HTTPError => e
+      raise unless e.io.first == '404'
+    end
   end
 end
